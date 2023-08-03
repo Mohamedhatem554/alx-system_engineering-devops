@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lampt
+ls -1Ap
