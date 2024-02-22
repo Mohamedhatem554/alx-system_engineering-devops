@@ -1,0 +1,7 @@
+#!/bin/bash
+echo " add your commit 
+"
+read var
+git add . 
+git commit -m " $var"
+git push
