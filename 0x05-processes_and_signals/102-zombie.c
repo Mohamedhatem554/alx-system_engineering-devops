@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <stdlib.h>
 
 /**
  * main - main function
@@ -11,7 +12,7 @@ int main(void)
 	int i;
 	pid_t mypid;
 
-	for (i = 0; i > 5; i++)
+	for (i = 0; i < 5; i++)
 	{
 		mypid = fork();
 		if (mypid)
