@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# shell check script
+
+shellcheck ./*
