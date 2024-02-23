@@ -1,28 +1,26 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
+#include <stdlib.h>
 
 /**
- * main - zombies
- *
- * Description: make five zombies
- * Return: 0 for success
- */
+ * main - main function
+ * Return: Nothing
+*/
 int main(void)
 {
 	int i;
-	pid_t pidme;
+	pid_t mypid;
 
-	i = 0;
-	while (i < 5)
+	for (i = 0; i < 5; i++)
 	{
-		pidme = fork();
-		if (pidme)
-			printf("Zombie process created, PID: %i\n", pidme);
+		mypid = fork();
+		if (mypid)
+		{
+			printf("Zombie process created, PID: %d\n", mypid);
+		}
 		else
 			exit(0);
-		i++;
 	}
 	sleep(100);
 	return (0);
