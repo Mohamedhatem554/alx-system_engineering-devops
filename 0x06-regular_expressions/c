@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# chmod all
+chmod +x *
+chmod -x README.md
